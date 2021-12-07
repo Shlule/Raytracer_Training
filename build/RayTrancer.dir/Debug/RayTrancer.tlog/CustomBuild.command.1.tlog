@@ -1,0 +1,10 @@
+^D:\ROGLIANO_ELOUAN\RAYTRACING\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Rogliano_Elouan/RayTracing -BD:/Rogliano_Elouan/RayTracing/build --check-stamp-file D:/Rogliano_Elouan/RayTracing/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
